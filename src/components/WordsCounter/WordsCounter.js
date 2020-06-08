@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import styles from './WordsCounter.module.css';
+
 const WordsCounter = ({ words }) => (
-  <div>
+  <div className={styles.WordsCounter}>
+    <p>Palavras mais presentes: </p>
     {words.map((word) => (
-      <p>
-        {word.value}
-        <span>{word.occurrences}</span>
-      </p>
+      <span>
+        {word.value}: {word.occurrences}
+      </span>
     ))}
   </div>
 );

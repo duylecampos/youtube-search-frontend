@@ -1,0 +1,14 @@
+.WordsCounter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.WordsCounter > span {
+  margin: 5px 10px 0;
+  border: 1px solid #aaa;
+  display: inline-block;
+  padding: 5px 10px;
+  box-shadow: 4px 4px 8px 0px #ddd;
+  align-self: center;
+}
