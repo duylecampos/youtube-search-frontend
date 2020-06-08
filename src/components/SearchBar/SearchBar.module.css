@@ -1,0 +1,14 @@
+.SearchBar {
+  padding: 10px 5%;
+}
+
+.SearchBar form {
+  display: flex;
+}
+
+.SearchBar input {
+  flex-grow: 1;
+  font-size: 25px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
