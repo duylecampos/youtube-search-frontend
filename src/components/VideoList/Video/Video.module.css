@@ -1,0 +1,41 @@
+.Video {
+  width: 320px;
+  height: 400px;
+  margin: 10px;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+  animation: fadeIn 1s;
+  box-shadow: 0px 0px 10px 5px #eee;
+}
+
+.Video img {
+  width: 100%;
+}
+
+.Video > div {
+  padding: 0 10px;
+}
+
+.Video h2 {
+  font-size: 1.2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Video p {
+  font-size: 0.8em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
