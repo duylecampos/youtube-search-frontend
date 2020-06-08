@@ -4,11 +4,94 @@
 
 .SearchBar form {
   display: flex;
+  flex-wrap: wrap;
 }
 
-.SearchBar input {
+.SearchBar form .term,
+.SearchBar .availabilityWrapper {
+  margin: 5px;
+}
+
+.SearchBar input,
+.SearchBar button {
+  font-size: 25px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+.SearchBar input:focus {
+  outline: none;
+}
+.SearchBar input.term {
   flex-grow: 1;
   font-size: 25px;
   padding: 10px;
   border: 1px solid #ddd;
+}
+
+.SearchBar .availabilityWrapper {
+  flex-grow: 1;
+  display: flex;
+}
+
+.SearchBar input.availability {
+  border-right: 1px solid #eee;
+  flex-grow: 1;
+}
+
+.SearchBar button {
+  border-left: none;
+  width: 50px;
+}
+
+.SearchBar button:focus {
+  outline: none;
+  cursor: help;
+}
+
+.SearchBar .tooltip {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  padding: 5px;
+  background-color: #fff;
+  position: relative;
+}
+.SearchBar .tooltip:before {
+  content: attr(data-title);
+  background-color: #000;
+  color: #fff;
+  font-size: 13px;
+  padding: 10px;
+  box-sizing: border-box;
+  position: absolute;
+  right: 0;
+  top: 65px;
+  width: max-content;
+  max-width: calc(100vw - 10vw);
+  opacity: 0;
+  transition: all 0.4s ease;
+  word-break: normal;
+}
+.SearchBar .tooltip:after {
+  content: '';
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  left: 5px;
+  bottom: -16px;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #000 transparent;
+  transition: all 0.4s ease;
+}
+.SearchBar .tooltip:hover:after,
+.SearchBar .tooltip:hover:before {
+  opacity: 1;
+}
+
+.SearchBar button[type='submit'] {
+  display: none;
 }
