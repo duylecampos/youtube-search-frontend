@@ -1,0 +1,7 @@
+.TimeSpent > p {
+  text-align: center;
+}
+
+.TimeSpent span {
+  font-weight: bold;
+}
