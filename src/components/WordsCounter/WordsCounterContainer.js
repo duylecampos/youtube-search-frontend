@@ -10,7 +10,7 @@ const WordsCounterContainer = () => {
   const sortedWords = words.sort((a, b) =>
     a.occurrences > b.occurrences ? -1 : 1,
   );
-  return <WordsCounter words={sortedWords} />;
+  return sortedWords.length > 0 ? <WordsCounter words={sortedWords} /> : null;
 };
 
 export default WordsCounterContainer;

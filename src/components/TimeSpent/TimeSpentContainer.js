@@ -4,7 +4,7 @@ import TimeSpent from './TimeSpent';
 
 const TimeSpentContainer = () => {
   const timeSpent = useSelector((state) => state.days_to_watch_all);
-  return <TimeSpent time={timeSpent} />;
+  return timeSpent ? <TimeSpent time={timeSpent} /> : null;
 };
 
 export default TimeSpentContainer;
